@@ -1,0 +1,97 @@
+{
+  "name": "Product",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Product name"
+    },
+    "description": {
+      "type": "string",
+      "description": "Product description"
+    },
+    "price": {
+      "type": "number",
+      "description": "Product price"
+    },
+    "original_price": {
+      "type": "number",
+      "description": "Original price before discount"
+    },
+    "supplier": {
+      "type": "string",
+      "description": "Supplier name"
+    },
+    "supplier_url": {
+      "type": "string",
+      "description": "Link to supplier product page"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Main product image URL"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "electronics",
+        "fashion",
+        "home",
+        "beauty",
+        "sports",
+        "automotive",
+        "toys",
+        "jewelry",
+        "books",
+        "health",
+        "other"
+      ],
+      "description": "Product category"
+    },
+    "trending_score": {
+      "type": "number",
+      "description": "Trending score from 1-100"
+    },
+    "monthly_sales": {
+      "type": "number",
+      "description": "Estimated monthly sales volume"
+    },
+    "profit_margin": {
+      "type": "number",
+      "description": "Estimated profit margin percentage"
+    },
+    "shipping_time": {
+      "type": "string",
+      "description": "Estimated shipping time"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Product tags"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "saved",
+        "uploaded",
+        "archived"
+      ],
+      "default": "saved",
+      "description": "Product status in your pipeline"
+    },
+    "platform_uploaded": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Platforms where product has been uploaded"
+    }
+  },
+  "required": [
+    "title",
+    "price",
+    "supplier",
+    "category"
+  ]
+}
